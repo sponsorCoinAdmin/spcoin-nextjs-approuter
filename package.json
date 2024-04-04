@@ -12,6 +12,7 @@
     "@sponsorcoin/spcoin-prod": "^1.0.1",
     "@svgr/webpack": "^8.1.0",
     "@wagmi/chains": "^1.8.0",
+    "@wagmi/core": "^2.6.15",
     "antd": "^5.12.1",
     "autoprefixer": "10.4.14",
     "axios": "^1.6.2",
@@ -28,8 +29,7 @@
     "react-dom": "^18",
     "siwe": "^2.1.4",
     "swr": "^2.1.5",
-    "typescript": "5.0.4",
-    "wagmi": "^1.4.6"
+    "typescript": "5.0.4"
   },
   "devDependencies": {
     "@types/node": "20.1.3",

@@ -1,17 +1,15 @@
-import { createConfig, configureChains, fetchBalance } from '@wagmi/core'
-import { mainnet, polygon, sepolia } from '@wagmi/chains'
-import { publicProvider } from '@wagmi/core/providers/public'
+import { createConfig, http } from 'wagmi'
+import { mainnet, polygon, sepolia } from 'wagmi/chains'
 
-const { publicClient, webSocketPublicClient } = configureChains(
-    [mainnet, polygon, sepolia],
-    [publicProvider()],
-  )
-  
-  const config = createConfig({
-    publicClient,
-    webSocketPublicClient,
+  export const config = createConfig({
+    chains: [mainnet, polygon, sepolia], 
+    transports: { 
+      [mainnet.id]: http(), 
+      [polygon.id]: http(), 
+      [sepolia.id]: http(), 
+    }, 
   })
-
+  
   function setWagmiConfig() {
     return config
   }
